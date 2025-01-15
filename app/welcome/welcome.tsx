@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
@@ -20,27 +21,14 @@ export function Welcome({ message }: { message: string }) {
           </div>
         </header>
         <div className="max-w-[300px] w-full space-y-6 px-4">
-          <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              What&apos;s next?
-            </p>
-            <ul>
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
-                  <a
-                    className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon}
-                    {text}
-                  </a>
-                </li>
-              ))}
-              <li className="self-stretch p-3 leading-normal">{message}</li>
-            </ul>
-          </nav>
+          <div className="flex flex-col gap-4">
+            <Link
+              to="/about"
+              className="flex items-center gap-3 rounded-lg border border-gray-300 px-4 py-3 text-base font-medium text-gray-600 transition hover:text-black dark:border-gray-700 dark:text-gray-300 dark:hover:text-white"
+            >
+              Go to About page
+            </Link>
+          </div>
         </div>
       </div>
     </main>
