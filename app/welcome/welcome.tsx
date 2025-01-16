@@ -29,6 +29,14 @@ export function Welcome({ message }: { message: string }) {
               Go to About page
             </Link>
           </div>
+          <div className="flex flex-col gap-4">
+            <Link
+              to="/assets/logo-dark.svg"
+              className="flex items-center gap-3 rounded-lg border border-gray-300 px-4 py-3 text-base font-medium text-gray-600 transition hover:text-black dark:border-gray-700 dark:text-gray-300 dark:hover:text-white"
+            >
+              Go to static asset
+            </Link>
+          </div>
         </div>
       </div>
     </main>
